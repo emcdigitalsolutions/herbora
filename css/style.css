@@ -2104,13 +2104,31 @@ h1, h2, h3, h4, h5, h6 {
         --nav-height: 70px;
     }
 
-    .navbar-links,
-    .navbar-social {
+    .navbar-links {
         display: none;
     }
 
+    .navbar-social {
+        margin-left: auto;
+        gap: 10px;
+    }
+
+    .navbar-social svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .navbar-brand-text span:first-child {
+        font-size: 1.25rem;
+    }
+
     .brand-subtitle {
-        display: none;
+        font-size: 0.6rem;
+    }
+
+    .navbar-logo {
+        width: 24px;
+        height: 36px;
     }
 
     .navbar-toggle {
