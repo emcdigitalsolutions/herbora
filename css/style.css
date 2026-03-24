@@ -225,9 +225,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar-logo {
-    width: 32px;
-    height: 48px;
+    width: 40px;
+    height: 40px;
     flex-shrink: 0;
+    object-fit: contain;
 }
 
 .navbar-brand-text {
@@ -1668,9 +1669,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .footer-logo {
-    width: 28px;
-    height: 42px;
+    width: 36px;
+    height: 36px;
     flex-shrink: 0;
+    object-fit: contain;
 }
 
 .footer-brand-text {
@@ -2132,8 +2134,8 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .navbar-logo {
-        width: 24px;
-        height: 36px;
+        width: 32px;
+        height: 32px;
     }
 
     .navbar-toggle {
