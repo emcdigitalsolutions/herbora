@@ -231,16 +231,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar-brand-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar-brand-text span:first-child {
     font-family: var(--font-heading);
     font-size: 1.6rem;
     font-weight: 700;
     color: var(--herbora-dark);
     letter-spacing: 0.02em;
+    line-height: 1.2;
 }
 
 .brand-subtitle {
     font-family: var(--font-body);
-    font-size: 0.78rem;
+    font-size: 0.72rem;
     font-weight: 400;
     color: var(--text-medium);
     letter-spacing: 0.06em;
