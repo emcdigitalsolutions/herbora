@@ -38,11 +38,13 @@
 
     function openMobileMenu() {
         mobileOverlay.classList.add('active');
+        navbarToggle.classList.add('is-open');
         document.body.style.overflow = 'hidden';
     }
 
     function closeMobileMenu() {
         mobileOverlay.classList.remove('active');
+        navbarToggle.classList.remove('is-open');
         document.body.style.overflow = '';
     }
 
@@ -58,6 +60,15 @@
 
     if (mobileClose) {
         mobileClose.addEventListener('click', closeMobileMenu);
+    }
+
+    // Chiudi overlay toccando lo sfondo
+    if (mobileOverlay) {
+        mobileOverlay.addEventListener('click', function (e) {
+            if (e.target === mobileOverlay) {
+                closeMobileMenu();
+            }
+        });
     }
 
     mobileLinks.forEach(function (link) {
