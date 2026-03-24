@@ -35,15 +35,19 @@
     var mobileOverlay = document.getElementById('mobileOverlay');
     var mobileLinks = document.querySelectorAll('.mobile-link');
 
+    var navbarSocial = document.querySelector('.navbar-social');
+
     function openMobileMenu() {
         mobileOverlay.classList.add('active');
         navbarToggle.classList.add('is-open');
+        if (navbarSocial) navbarSocial.classList.add('is-hidden');
         document.body.style.overflow = 'hidden';
     }
 
     function closeMobileMenu() {
         mobileOverlay.classList.remove('active');
         navbarToggle.classList.remove('is-open');
+        if (navbarSocial) navbarSocial.classList.remove('is-hidden');
         document.body.style.overflow = '';
     }
 
