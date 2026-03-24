@@ -1657,15 +1657,30 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .footer-logo {
-    width: 36px;
-    height: 36px;
+    width: 28px;
+    height: 42px;
+    flex-shrink: 0;
 }
 
-.footer-brand span {
+.footer-brand-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-brand-text span:first-child {
     font-family: var(--font-heading);
     font-size: 1.5rem;
     font-weight: 700;
     color: #fff;
+    line-height: 1.2;
+}
+
+.footer-brand-subtitle {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.6);
+    letter-spacing: 0.06em;
 }
 
 .footer-about p {
@@ -1695,6 +1710,10 @@ h1, h2, h3, h4, h5, h6 {
 .footer-social a:hover {
     background: var(--terracotta);
     color: #fff;
+}
+
+.footer-social-wa:hover {
+    background: #25D366;
 }
 
 .footer-col h4 {
