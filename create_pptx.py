@@ -142,7 +142,7 @@ add_rect(slide, Inches(1.5), Inches(4.3), Inches(3), Inches(0.05), TERRACOTTA)
 add_text(slide, Inches(1.5), Inches(4.8), Inches(5), Inches(0.4),
          "Sviluppato da Enrico Maria Caruso", 18, TEXT_MEDIUM, False)
 add_text(slide, Inches(1.5), Inches(5.3), Inches(5), Inches(0.4),
-         "enricomariacaruso.it", 16, SAGE, False)
+         "emcdigitalsolutions.it", 16, SAGE, False)
 
 # Right side - brand card
 card = add_shape(slide, Inches(8.5), Inches(2), Inches(4), Inches(4), WHITE, SAGE)
@@ -520,7 +520,7 @@ add_text(slide, Inches(1), Inches(4.5), Inches(11.3), Inches(0.8),
          "Enrico Maria Caruso", 32, HERBORA_DARK, True, PP_ALIGN.CENTER)
 
 add_text(slide, Inches(1), Inches(5.3), Inches(11.3), Inches(0.5),
-         "Full Stack Developer — enricomariacaruso.it", 18, SAGE, False, PP_ALIGN.CENTER)
+         "Full Stack Developer — emcdigitalsolutions.it", 18, SAGE, False, PP_ALIGN.CENTER)
 
 # Bottom bar
 add_rect(slide, 0, Inches(7.3), W, Inches(0.2), HERBORA_GREEN)
