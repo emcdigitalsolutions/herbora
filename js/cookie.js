@@ -79,14 +79,14 @@
         if (!mapContainer || !mapPlaceholder) return;
 
         var iframe = document.createElement('iframe');
-        iframe.src = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3160.0!2d12.8892!3d37.7284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x131a3c6b0a0a0a0b%3A0x0!2sVia+Vittorio+Emanuele+72%2C+91028+Partanna+TP!5e0!3m2!1sit!2sit!4v1700000000000!5m2!1sit!2sit';
+        iframe.src = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3160.0!2d12.8892!3d37.7284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x131a3c6b0a0a0a0b%3A0x0!2sVia+Vittorio+Emanuele+70%2C+91028+Partanna+TP!5e0!3m2!1sit!2sit!4v1700000000000!5m2!1sit!2sit';
         iframe.width = '100%';
         iframe.height = '100%';
         iframe.style.border = 'none';
         iframe.loading = 'lazy';
         iframe.referrerPolicy = 'no-referrer-when-downgrade';
         iframe.setAttribute('allowfullscreen', '');
-        iframe.title = 'Google Maps - Herbora, Via Vittorio Emanuele 72, Partanna';
+        iframe.title = 'Google Maps - Herbora, Via Vittorio Emanuele 70, Partanna';
 
         mapPlaceholder.style.display = 'none';
         mapContainer.appendChild(iframe);
