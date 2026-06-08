@@ -94,6 +94,7 @@
         ]
     }
     </script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Cosa offrite in erboristeria?","acceptedAnswer":{"@type":"Answer","text":"Prodotti naturali, erbe officinali, integratori, tisane, cosmesi naturale e rimedi della tradizione erboristica, selezionati con cura."}},{"@type":"Question","name":"Date consulenza personalizzata?","acceptedAnswer":{"@type":"Answer","text":"Sì: ti aiutiamo a scegliere il prodotto più adatto alle tue esigenze, con consigli su misura."}},{"@type":"Question","name":"I prodotti sono naturali e di qualità?","acceptedAnswer":{"@type":"Answer","text":"Sì, selezioniamo prodotti naturali e di qualità, nel rispetto della tradizione erboristica e del benessere della persona."}},{"@type":"Question","name":"Si possono ordinare e ricevere i prodotti?","acceptedAnswer":{"@type":"Answer","text":"Contattaci per disponibilità e ordini: ti spieghiamo come ricevere i prodotti che cerchi."}},{"@type":"Question","name":"Dove si trova l’erboristeria?","acceptedAnswer":{"@type":"Answer","text":"A Partanna (TP), in Sicilia."}},{"@type":"Question","name":"Come posso contattarvi?","acceptedAnswer":{"@type":"Answer","text":"Passa a trovarci in erboristeria oppure scrivici: siamo felici di consigliarti."}}]}</script>
 </head>
 <body>
 
@@ -1056,7 +1057,37 @@
     </section>
 
     <!-- ========== FOOTER ========== -->
-    <footer class="footer">
+    
+<!-- FAQ (EMC) -->
+<section class="emcfaq-sec" id="faq">
+  <div class="emcfaq-wrap">
+    <p class="emcfaq-eye">FAQ</p>
+    <h2 class="emcfaq-title">Domande frequenti</h2>
+    <div class="emcfaq-list">
+      <details><summary>Cosa offrite in erboristeria?</summary><p>Prodotti naturali, erbe officinali, integratori, tisane, cosmesi naturale e rimedi della tradizione erboristica, selezionati con cura.</p></details>
+      <details><summary>Date consulenza personalizzata?</summary><p>Sì: ti aiutiamo a scegliere il prodotto più adatto alle tue esigenze, con consigli su misura.</p></details>
+      <details><summary>I prodotti sono naturali e di qualità?</summary><p>Sì, selezioniamo prodotti naturali e di qualità, nel rispetto della tradizione erboristica e del benessere della persona.</p></details>
+      <details><summary>Si possono ordinare e ricevere i prodotti?</summary><p>Contattaci per disponibilità e ordini: ti spieghiamo come ricevere i prodotti che cerchi.</p></details>
+      <details><summary>Dove si trova l’erboristeria?</summary><p>A Partanna (TP), in Sicilia.</p></details>
+      <details><summary>Come posso contattarvi?</summary><p>Passa a trovarci in erboristeria oppure scrivici: siamo felici di consigliarti.</p></details>
+    </div>
+  </div>
+</section>
+<style>
+.emcfaq-sec{background:#edf3e8;padding:72px 20px;font-family:'Nunito Sans',sans-serif}
+.emcfaq-wrap{max-width:820px;margin:0 auto}
+.emcfaq-eye{text-align:center;text-transform:uppercase;letter-spacing:.2em;font-size:13px;font-weight:700;color:#1d5c38;margin:0 0 8px}
+.emcfaq-title{text-align:center;font-family:'Cormorant Garamond',Georgia,serif;font-size:36px;color:#1d3a26;margin:0 0 30px}
+.emcfaq-list details{background:#ffffff;border:1px solid #d3e3cf;border-radius:14px;margin-bottom:12px;padding:0 22px}
+.emcfaq-list summary{cursor:pointer;list-style:none;padding:18px 0;font-weight:700;color:#1d3a26;display:flex;justify-content:space-between;gap:14px;align-items:center;font-size:17px}
+.emcfaq-list summary::-webkit-details-marker{display:none}
+.emcfaq-list summary::after{content:"+";font-size:24px;font-weight:400;color:#2e7d50;transition:.2s;flex-shrink:0}
+.emcfaq-list details[open] summary::after{transform:rotate(45deg)}
+.emcfaq-list details p{padding:0 0 18px;margin:0;color:#55705f;line-height:1.65}
+@media(max-width:600px){.emcfaq-title{font-size:27px}}
+</style>
+
+<footer class="footer">
         <!-- Botanical vine top border -->
         <svg class="footer-vine" viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M0 50 C60 30, 120 50, 180 35 C240 20, 300 45, 360 30 C420 15, 480 40, 540 25 C600 10, 660 40, 720 30 C780 20, 840 45, 900 25 C960 5, 1020 35, 1080 20 C1140 5, 1200 30, 1260 15 C1320 0, 1380 25, 1440 10" fill="none" stroke="#A8C5A0" stroke-width="2" opacity="0.4"/>
