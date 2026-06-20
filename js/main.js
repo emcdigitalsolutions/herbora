@@ -242,21 +242,7 @@
             }
         });
 
-        contactForm.addEventListener('submit', function (e) {
-            var privacyCheck = document.getElementById('formPrivacy');
-            if (!privacyCheck.checked) {
-                e.preventDefault();
-                privacyCheck.focus();
-                return;
-            }
-
-            // Visual feedback
-            var submitBtn = contactForm.querySelector('.btn-submit');
-            if (submitBtn) {
-                submitBtn.textContent = 'Invio in corso...';
-                submitBtn.disabled = true;
-            }
-        });
+        /* invio gestito da <script> ISOLATO in fondo a index.html (POST Apps Script EMC) */
     }
 
 
