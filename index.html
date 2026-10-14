@@ -1050,9 +1050,10 @@
                     <label for="formPrivacy">Ho letto e accetto la <a href="privacy.html" target="_blank">Privacy Policy</a> *</label>
                 </div>
 
+                <p style="font-size:.84rem;line-height:1.5;opacity:.8;margin:0 0 10px">Premendo il pulsante si apre il tuo programma di posta con il messaggio già pronto: controllalo e invialo tu. Il sito non invia né conserva i tuoi dati.</p>
                 <button type="submit" class="btn btn-primary btn-submit">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C6 2 2 8 6 14c2 3 6 8 6 8s4-5 6-8c4-6 0-12-6-12z"/></svg>
-                    Invia Messaggio
+                    Scrivi con la tua email
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </button>
                 <div class="form-note" id="formNote"></div>
@@ -1238,9 +1239,9 @@
         var form=document.getElementById('contactForm');
         if(!form) return;
         var note=document.getElementById('formNote');
-        var API='https://script.google.com/macros/s/AKfycbxLCgN0-mHN86Dk37a5m-p2A3DgMjc8b__aCO_9oBA_amLUn5MlipebKalo5qNIoSWl/exec';
-        var OK='Grazie! Abbiamo ricevuto il tuo messaggio, ti ricontatteremo al più presto.';
-        var ERR='Ops, qualcosa è andato storto. Riprova o scrivici su WhatsApp.';
+        // Nessun server intermedio: il modulo apre il programma di posta dell'utente con il messaggio pronto.
+        var TO='info@herboralab.it';
+        var OK='Si è aperto il tuo programma di posta con il messaggio pronto: controllalo e premi Invia. Se non si apre nulla, scrivici a '+TO+'.';
         var REQ='Compila i campi obbligatori (nome, email e messaggio).';
         var PRIV='Per inviare, accetta la Privacy Policy.';
         function val(id){var el=document.getElementById(id);return el?el.value.trim():'';}
@@ -1256,11 +1257,9 @@
           var privacy=document.getElementById('formPrivacy');
           if(!nome||!email||!messaggio){showNote('err',REQ);return;}
           if(privacy&&!privacy.checked){showNote('err',PRIV);if(privacy)privacy.focus();return;}
-          if(btn){btn.disabled=true;btn.textContent='Invio in corso...';}
-          fetch(API,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify({site:'herbora',name:nome,email:email,phone:val('formTelefono'),message:messaggio})})
-          .then(function(){showNote('ok',OK);form.reset();})
-          .catch(function(){showNote('err',ERR);})
-          .finally(function(){if(btn){btn.disabled=false;btn.innerHTML=btnLabel;}});
+          var corpo=messaggio+'\n\n— '+nome+'\nEmail: '+email+(val('formTelefono')?'\nTelefono: '+val('formTelefono'):'');
+          window.location.href='mailto:info@herboralab.it?subject='+encodeURIComponent('Richiesta dal sito — '+nome)+'&body='+encodeURIComponent(corpo);
+          showNote('ok',OK);
         });
       }
       if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init);}else{init();}
